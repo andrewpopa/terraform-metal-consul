@@ -1,13 +1,13 @@
 bootstrap_expect   = 3
 client_addr        = "0.0.0.0"
-bind_addr          = "{{ GetInterfaceIP \"enp0s8\" }}"
+bind_addr          = "{{ GetInterfaceIP \"bond0\" }}"
 data_dir           = "/opt/consul"
-datacenter         = "east"
+datacenter         = "dc-emea"
 log_level          = "INFO"
 server             = true
 ui                 = true
 non_voting_server  = false
-${config}
+${retry_join}
 
 autopilot         = {
     cleanup_dead_servers      = true,
