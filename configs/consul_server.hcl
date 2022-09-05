@@ -7,7 +7,7 @@ log_level          = "INFO"
 server             = true
 ui                 = true
 non_voting_server  = false
-retry_join         = []
+${config}
 
 autopilot         = {
     cleanup_dead_servers      = true,
