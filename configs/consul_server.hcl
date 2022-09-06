@@ -8,7 +8,7 @@ server             = true
 ui                 = true
 non_voting_server  = false
 retry_join         = [
-  "provider=packet auth_token=${metal_token} project=${project_id}"
+  "provider=packet auth_token="${metal_token} "project="${project_id}
 ]
 
 autopilot         = {
