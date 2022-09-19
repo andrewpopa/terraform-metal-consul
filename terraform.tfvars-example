@@ -1,0 +1,40 @@
+project_id     = ""
+consul_version = "1.13.1"
+metal_token    = ""
+consul_cluster = {
+  "amsterdam-1" = {
+    hostname         = "consul-1"
+    plan             = "c3.small.x86"
+    facilities       = "am6"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+  },
+  "amsterdam-2" = {
+    hostname         = "consul-2"
+    plan             = "c3.small.x86"
+    facilities       = "am6"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+  },
+  "madrid" = {
+    hostname         = "consul-3"
+    plan             = "c3.small.x86"
+    facilities       = "md2"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+  },
+  "frankfurt-1" = {
+    hostname         = "consul-4"
+    plan             = "c3.small.x86"
+    facilities       = "fr2"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+  },
+  "frankfurt-2" = {
+    hostname         = "consul-5"
+    plan             = "c3.small.x86"
+    facilities       = "fr2"
+    operating_system = "ubuntu_22_04"
+    billing_cycle    = "hourly"
+  }
+}
