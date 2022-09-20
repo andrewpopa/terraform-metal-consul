@@ -1,35 +1,50 @@
-# terraform-provider-template
-Template repository for terraform modules
+# Consul on Equinix Metal
 
 ## Table of Contents
 - [Pre-requirement](#pre-requirements)
 - [Usage](#usage)
-- [Inputs](#inputs)
-- [Outputs](#outputs)
 
 ## Pre-requirements
 
 ↥ [back to top](#table-of-contents)
 
 - [Terraform](https://www.terraform.io/downloads.html)
-- [Vagrant](https://www.vagrantup.com/downloads)
+- [Equinix Metal](https://console.equinix.com/)
 
 ## Usage
 
 ↥ [back to top](#table-of-contents)
 
-The full examples are in the `examples` folder. The basic usage would be
+Make sure you are [authenticated](https://registry.terraform.io/providers/equinix/equinix/latest/docs) to Equinix Metal
 
-```bash
-module "this" {
-  source = ""
-}
+```shell
+env | egrep -i "metal|equinix"
+METAL_AUTH_TOKEN=XXX
+EQUINIX_API_CLIENTID=XXX
+EQUINIX_API_CLIENTSECRET=XXX
 ```
 
-## Inputs
+clone the repository
 
-↥ [back to top](#table-of-contents)
+```shell
+git clone git@github.com:andrewpopa/terraform-metal-consul.git
+cd terraform-metal-consul
+```
 
-## Outputs
+make sure you edit `terraform.tfvars` with correct values
 
-↥ [back to top](#table-of-contents)
+deploy the infrastructure
+
+```
+terraform init
+terraform apply
+```
+
+This will deploy Consul cluster according on [Reference Architecture](https://learn.hashicorp.com/tutorials/consul/reference-architecture)
+
+
+delete the environment when needed
+
+```
+terraform destroy
+```
